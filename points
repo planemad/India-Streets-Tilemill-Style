@@ -1,0 +1,371 @@
+#planetosmpoint[zoom>12]::data{
+  [highway='bus_stop'],[amenity='bus_station'],[railway='station'],[amenity='ferry_terminal'],[aeroway='terminal']{
+  marker-type:ellipse;
+    marker-width:3;
+    marker-allow-overlap:true;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.6;
+    marker-fill:yellow;
+  //  marker-comp-op:overlay;
+  }
+  [railway='buffer_stop']{
+  marker-type:ellipse;
+    marker-width:2;
+    marker-allow-overlap:true;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:1;
+    marker-fill:@railway;
+  //  marker-comp-op:overlay;
+  }
+   [amenity='hospital']{
+    marker-type:ellipse;
+    marker-width:10;
+    marker-line-color:red;
+    marker-line-opacity:1;
+    marker-fill-opacity:0.5;
+    marker-fill:red;
+    marker-allow-overlap:true;
+  // marker-comp-op:hard-light;
+    }
+  [amenity='clinic'],[amenity='dentist'],[amenity='doctors'],[amenity='nursing_home']{
+    marker-type:ellipse;
+    marker-width:8;
+    marker-line-color:red;
+    marker-line-opacity:1;
+    marker-fill-opacity:0.5;
+    marker-fill:red;
+    marker-allow-overlap:true;
+  // marker-comp-op:hard-light;
+    }
+  [amenity='pharmacy']{
+    marker-type:ellipse;
+    marker-width:4;
+    marker-line-color:red;
+    marker-line-opacity:1;
+    marker-fill-opacity:0.5;
+    marker-fill:red;
+    marker-allow-overlap:true;
+  // marker-comp-op:hard-light;
+    }
+  [amenity='courthouse'],[amenity='townhall'],[amenity='university']{
+    marker-type:ellipse;
+    marker-width:12;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:blue;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+  [amenity='police'],[amenity='fire_station'],[amenity='bank'],[amenity='college']{
+    marker-type:ellipse;
+    marker-width:10;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:blue;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+   [amenity='post_office'],[amenity='police'],[amenity='fire_station'],[amenity='bank'],[amenity='school']{
+    marker-type:ellipse;
+    marker-width:8;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:blue;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+   [amenity='atm'],[amenity='post_box'],[amenity='bench'],[amenity='toilets'],[amenity='kindergarten']{
+    marker-type:ellipse;
+    marker-width:5;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:blue;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+    [amenity='fuel'],[amenity='parking'],[amenity='taxi'],[amenity='car_wash'],[amenity='bicycle_parking']
+    {
+    marker-type:ellipse;
+    marker-width:5;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:white;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+  [amenity='bicycle_rental'],[amenity='car_sharing']
+    {
+    marker-type:ellipse;
+    marker-width:3;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:white;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+  [tourism='attraction'],[tourism='museum'],[tourism='theme_park'],[historic='ruins'],
+    [tourism='zoo'],[amenity='place_of_worship'],[amenity='library']{
+    marker-type:ellipse;
+    marker-width:10;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:brown;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+  [tourism='artwork'],[historic='monument'],[tourism='viewpoint'],[tourism='yes'],[tourism='information']{
+    marker-type:ellipse;
+    marker-width:5;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:brown;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+    [amenity='cinema'],[amenity='theatre'],[leisure='stadium'],[amenity='arts_centre']{
+    marker-type:ellipse;
+    marker-width:10;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:blue;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+  [tourism='hotel'],[tourism='guest_house'],[tourism='hostel'],[amenity='nightclub'],
+   {
+    marker-type:ellipse;
+    marker-width:8;
+    marker-line-color:white;
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:blue;
+    marker-allow-overlap:true;
+  // marker-comp-op:overlay;
+    }
+   [amenity='restaurant'],[amenity='cafe'],[amenity='fast_food'],[amenity='pub'],
+    [amenity='bar'],[shop!=''],[amenity='ice_cream']{
+    marker-type:ellipse;
+    marker-width:5;
+    marker-line-color:blue;
+    marker-line-opacity:0.5;
+    marker-fill-opacity:0.1;
+    marker-fill:blue;
+    marker-allow-overlap:true;
+   marker-comp-op:hard-light;
+    }
+  [natural='beach'],[leisure='stadium']{
+    marker-type:ellipse;
+    marker-width:10;
+    marker-line-color:green;
+    marker-line-opacity:0.5;
+    marker-fill-opacity:0.1;
+    marker-fill:green;
+    marker-allow-overlap:true;
+   marker-comp-op:hard-light;
+    }
+  [natural='tree'][zoom>16]{
+    marker-type:ellipse;
+    marker-width:1;
+      marker-line-opacity:1;
+    marker-line-color:lightgreen;
+    marker-allow-overlap:true;
+   marker-comp-op:hard-light;
+    ::blur{
+    marker-type:ellipse;
+    marker-width:20;
+    marker-line-color:lighten(green,50%);
+    marker-line-opacity:0;
+    marker-fill-opacity:0.5;
+    marker-fill:darken(green,15%);
+    marker-allow-overlap:true;
+   marker-comp-op:hard-light;
+      image-filters:agg-stack-blur(3,3);
+      }
+    }
+  [power!='']{
+  marker-type:ellipse;
+  marker-width:1;
+  marker-fill:white;
+    marker-allow-overlap:true;
+  }
+  }
+
+#planetosmpoint::text{
+  [place='locality'][zoom>14]{
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Light';
+    text-size:15;
+    text-fill:white;
+      text-opacity:0.8;
+    text-comp-op:screen;
+    }
+  [place='neighbourhood'][zoom>12],[place='village'][zoom>12]{
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Light';
+    text-size:20;
+    text-fill:white;
+    text-comp-op:screen;
+    }
+  [place='suburb'][zoom>12]::shadow3{
+     image-filters:agg-stack-blur(4,4);
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Regular';
+    text-size:25;
+    [zoom<15]{text-size:15;}
+    text-fill:black;
+      text-opacity:0.6;
+    text-allow-overlap:true;
+    text-comp-op:multiply;
+    text-halo-fill:black;
+    text-halo-radius:2;
+    ::top{
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Regular';
+    text-size:25;
+      [zoom<15]{text-size:20;}
+    text-fill:white;
+    text-allow-overlap:true;
+   // text-comp-op:overlay;
+      }
+    }
+  [aeroway='terminal'][zoom>12]::shadow{
+    image-filters:agg-stack-blur(4,4);
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Bold';
+    text-size:17;
+    text-fill:black;
+      text-opacity:0.6;
+    text-allow-overlap:true;
+    text-comp-op:multiply;
+    text-halo-fill:black;
+    text-halo-radius:2;
+    [disused='yes']{
+  text-opacity:0;
+  }
+    ::top{
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Bold';
+    text-size:17;
+    text-fill:@travel;
+    text-allow-overlap:true;
+   // text-comp-op:overlay;
+      [disused='yes']{
+  text-opacity:0.5;
+  }
+      }
+    }
+  [aeroway='aerodrome'][zoom>10]::shadow{
+ 
+    ::top{
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Bold';
+    text-size:17;
+    text-fill:@travel;
+    text-allow-overlap:true;
+   // text-comp-op:overlay;
+      [disused='yes']{
+  text-opacity:0.3;
+  }
+      }
+    }
+  [railway='station'][zoom>14]::shadow{
+    image-filters:agg-stack-blur(4,4);
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Bold';
+    text-size:15;
+    text-fill:black;
+      text-opacity:0.6;
+    text-allow-overlap:true;
+    text-comp-op:multiply;
+    text-halo-fill:black;
+    text-halo-radius:2;
+    [disused='yes']{
+  text-opacity:0;
+  }
+    ::top{
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Bold';
+    text-size:15;
+    text-fill:@travel;
+    text-allow-overlap:true;
+   // text-comp-op:overlay;
+      [disused='yes']{
+  text-opacity:0.5;
+  }
+      }
+    }
+  [amenity='bus_station'][zoom>14]::xshadow{
+    image-filters:agg-stack-blur(1,1);
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Bold';
+    text-size:12;
+    text-fill:black;
+      text-opacity:0.5;
+    text-allow-overlap:true;
+    text-comp-op:multiply;
+    text-halo-fill:black;
+    text-halo-radius:2;
+    ::top{
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Bold';
+    text-size:12;
+    text-fill:yellow;
+    text-allow-overlap:true;
+   // text-comp-op:overlay;
+      }
+    }
+  [amenity='ferry_terminal'][zoom>14]::xshadow{
+    image-filters:agg-stack-blur(1,1);
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Bold';
+    text-size:10;
+    text-fill:black;
+      text-opacity:0.5;
+    text-allow-overlap:true;
+    text-comp-op:multiply;
+    text-halo-fill:black;
+    text-halo-radius:2;
+    ::top{
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Bold';
+    text-size:10;
+    text-fill:yellow;
+    text-allow-overlap:true;
+   // text-comp-op:overlay;
+      }
+    }
+  [highway='bus_stop'][zoom>16]::top{
+    text-name:'[name]';
+    text-face-name:'Source Sans Pro Regular';
+    text-size:10;
+    text-fill:yellow;
+   text-allow-overlap:true;
+    text-placement-type:simple;
+    text-placements:N,E,W,S,8;
+    text-dy:10;
+   // text-comp-op:overlay;
+    }/*
+  [amenity='post_office'],[place!='']{
+    [postal_code!=''],[addr:postcode!='']{
+    text-name:'[postal_code][addr:postcode]';
+    text-face-name:'Source Sans Pro Regular';
+    text-size:10;
+    text-fill:yellow;
+    text-allow-overlap:true;
+   // text-comp-op:overlay;
+    }*/
+    }
+
+
+  }

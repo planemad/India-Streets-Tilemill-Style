@@ -1,0 +1,37 @@
+@railway:#555;
+@subway:#ff0;
+
+#planetosmline0[railway!=''][railway!='construction']{
+  line-width:15;
+  line-opacity:0.3;
+  line-comp-op:color-dodge;
+  line-join:round;
+  line-color:yellow;
+  
+  [railway='subway'],[construction='subway']{
+    line-dasharray:2,40;
+    line-width:20;
+    line-opacity:0.5;
+    }
+  ::top{
+    line-width:10;
+  line-opacity:0.1;
+  line-comp-op:color-dodge;
+  line-join:round;
+  line-color:white;
+    }
+  }
+
+#planetosmline[railway!='']{
+  line-width:1;
+  line-opacity:0.6;
+  line-comp-op:multiply;
+  line-join:round;
+  line-color:#666;
+  [service!='']{
+    line-width:0.5;
+    line-opacity:0.4;
+    line-color:#555;
+    line-comp-op:multiply;
+    }
+  }

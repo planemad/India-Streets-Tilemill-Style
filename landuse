@@ -1,0 +1,185 @@
+@landuse:#444;
+@health:red;
+@industry:brown;
+
+@road:white;
+@travel:yellow;
+
+@public:orange;
+@education:@road;
+@religion:#ccc;
+
+@shop:lighten(@public,20%);
+
+@office:blue;
+@house:lighten(@shop,10%);
+
+@open:green;
+@recreation:lighten(@open,20%);
+
+@culture:@recreation;
+
+#planetosmpolygon {
+    [landuse!=''],[military!='']{
+    polygon-fill: @landuse;
+    polygon-opacity: 0.4;
+    polygon-comp-op: plus;
+    line-color:black;
+      line-width:0.1;
+    [landuse='residential']{
+      polygon-fill: @house;
+    polygon-opacity: 0.4;
+      polygon-comp-op: screen;
+      
+}
+    [landuse='retail'] {
+    polygon-fill: @shop;
+    polygon-opacity: 0.9;
+       polygon-comp-op: screen;
+      line-color:@office;
+      line-width:3;
+}
+    
+    [landuse='commercial'],[tourism='hotel'] {
+    polygon-fill: @office;
+    polygon-opacity: 0.9;
+      polygon-comp-op: screen;
+}
+    [landuse='industrial'],[military!=''],[landuse='railway'],[aeroway='aerodrome'] {
+    polygon-fill: @industry;
+      polygon-comp-op: screen;
+      polygon-opacity: 0.9;
+}
+    [landuse='military']{
+    polygon-fill: @industry;
+      polygon-comp-op: screen;
+      polygon-opacity: 0.3;
+}
+  }
+
+::features {
+    [amenity='bus_station'],[railway='station'],[aeroway='terminal'],[amenity='taxi']
+    { 
+      
+      polygon-fill: @travel;
+    polygon-opacity: 0.8;
+      polygon-comp-op: hard-light;
+}
+    [amenity='place_of_worship'] {
+    polygon-fill: @religion;
+    polygon-opacity: 1;
+    polygon-comp-op: screen;
+}
+    [military!=''] {
+    polygon-fill: @landuse;
+    polygon-opacity: 0.4;
+    polygon-comp-op: plus;
+}
+
+  [amenity='parking'] {
+    polygon-fill: @road;
+    polygon-opacity: 0.2;
+    //  polygon-comp-op: plus;
+}
+  [amenity='hospital'] {
+    polygon-fill: @health;
+    polygon-opacity: 0.7;
+    //  polygon-comp-op: plus;
+}
+  [amenity='courthouse'],[amenity='townhall'],[amenity='police'],
+  [amenity='library'],[amenity='fire_station'],[amenity='post_office'],[amenity='toilets'] {
+    polygon-fill: @public;
+    polygon-opacity: 0.9;
+    polygon-comp-op: screen;
+}
+    [amenity='theatre'],[amenity='arts_centre'][historic='ruins'],[historic='memorial'],[tourism='museum'],[tourism='attraction'],
+      [leisure='sports_centre'],[leisure='stadium'],[leisure='golf_course'],[leisure='theme_park'],[landuse='recreation_ground']{
+    polygon-fill: @culture;
+    polygon-opacity: 0.9;
+    polygon-comp-op: screen;
+}
+  [amenity='school'],[amenity='college'],[amenity='university'] {
+    polygon-fill: @education;
+    polygon-opacity: 0.9;
+     polygon-comp-op: screen;
+}
+
+    [building='concourse']{
+    polygon-fill:@foot;
+      polygon-opacity:0.9;
+      line-color:black;
+      line-width:0.3;
+        }
+      [building!=''][layer<0]{
+    building-fill-opacity:0.2;
+      building-height:1;
+    }
+    
+  }
+}
+
+#planetosmpoint0 {
+    [highway='bus_stop'][zoom>12]{
+    marker-type: ellipse;
+    marker-line-color: yellow;
+    marker-line-width: 1;
+    marker-width: 15;
+    marker-allow-overlap: true;
+    marker-fill-opacity: 0.4;
+    marker-fill: white;
+}
+  [amenity='bus_station'][zoom>11] {
+    marker-type: ellipse;
+    marker-line-color: yellow;
+    marker-line-width: 2;
+    marker-width: 30;
+    marker-fill-opacity: 0.6;
+    marker-fill: white;
+    marker-allow-overlap: true;
+}
+  [amenity='ferry_terminal'][zoom>10] {
+    marker-type: ellipse;
+    marker-line-color: yellow;
+    marker-line-width: 2;
+    marker-width: 25;
+    marker-fill-opacity: 0.6;
+    marker-fill: white;
+    marker-allow-overlap: true;
+}
+    [aeroway='terminal'][zoom>8] {
+    marker-type: ellipse;
+    marker-line-color: yellow;
+    marker-line-width: 4;
+    marker-width: 60;
+    marker-fill-opacity: 0.1;
+    marker-fill: yellow;
+    marker-allow-overlap: true;
+}
+      [aeroway='aerodrome'][zoom>8] {
+    marker-type: ellipse;
+    marker-line-color: yellow;
+    marker-line-width: 1;
+    marker-width: 100;
+    marker-fill-opacity: 0.3;
+    marker-fill: yellow;
+    marker-allow-overlap: true;
+}
+  [railway='station'][zoom>9] {
+    marker-type: ellipse;
+    marker-line-color: yellow;
+    marker-line-width: 2;
+    marker-width:50;
+    marker-fill-opacity: 0.6;
+    marker-fill: yellow;
+    marker-allow-overlap: true;
+}
+  [highway='traffic_signals'][zoom>13] {
+    marker-type: ellipse;
+    marker-line-color: white;
+    marker-line-width: 1;
+    marker-width: 15;
+    marker-fill-opacity: 0.2;
+    marker-fill: white;
+    marker-allow-overlap: true;
+}
+}

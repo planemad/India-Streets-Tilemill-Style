@@ -1,0 +1,34 @@
+@water:#222;
+
+#planetosmline{
+[waterway!='']{
+    line-color:@water;
+    line-width:5;
+    line-opacity:0.1;
+    line-comp-op:minus;
+    line-join:round;
+    line-smooth:1;
+    [waterway='river']{line-width:5;line-opacity:1;}
+    [waterway='stream']{line-width:2;line-opacity:1;}
+      [waterway='canal']{line-width:3;line-opacity:0.4;}
+    [waterway='drain']{line-width:2;line-opacity:0.4;}
+  
+    }
+}
+
+#planetosmpolygon{
+  [natural='water'],[waterway='riverbank'],[landuse='reservoir'],[waterway='dock']{
+    polygon-fill:@water;
+    polygon-comp-op:minus;
+    }
+  [natural='wetland']{
+    polygon-fill:@water;
+    polygon-comp-op:minus;
+    polygon-opacity:0.5;
+    }
+  [landuse='grass'],[landuse='forest'],[natural='scrub'],[natural='wood'],[landuse='cemetery']{
+     polygon-fill:#658d00;
+    polygon-opacity:0.4;
+    polygon-comp-op:darken;
+  }
+  }

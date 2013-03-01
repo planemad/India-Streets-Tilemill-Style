@@ -1,0 +1,236 @@
+{
+  "bounds": [
+    72.8178,
+    18.9179,
+    72.8445,
+    18.954
+  ],
+  "center": [
+    72.8311,
+    18.9326,
+    16
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 12,
+  "maxzoom": 18,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "points",
+    "built",
+    "streets",
+    "natural",
+    "landuse",
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "extent": [
+        67.49999999060392,
+        6.679181199074439,
+        97.03156778649293,
+        35.39646669570055
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "planet_osm_point",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "7514065.6275,745212.802719324,10801504.7168654,4217890.76526795",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": ""
+      },
+      "id": "planetosmpoint0",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "planetosmpoint0"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        61.51928365103342,
+        1.1677858718742322,
+        103.6339012853002,
+        35.65836933615416
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "planet_osm_line",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "6848295.33,130006.33,11536473.12,4253714.77",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "",
+        "id": "planetosmline0",
+        "project": "india-streets",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "planetosmline0",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "planetosmline0"
+    },
+    {
+      "extent": [
+        68.39095045932447,
+        5.718999958504439,
+        97.7219858129042,
+        35.458653343365015
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "planet_osm_polygon",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "7613245.78,637695.95,10878361.7,4226386.31",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "",
+        "id": "planetosmpolygon",
+        "project": "india-streets",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "planetosmpolygon",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "planetosmpolygon"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        61.51928365103342,
+        1.1677858718742322,
+        103.6339012853002,
+        35.65836933615416
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "planet_osm_line",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "6848295.33,130006.33,11536473.12,4253714.77",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": ""
+      },
+      "id": "planetosmline",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "planetosmline"
+    },
+    {
+      "extent": [
+        72.7924973628215,
+        18.907652801380966,
+        72.8946592566548,
+        19.11184264688584
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "planet_osm_polygon",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "8103223.74,2144066.54,8114596.35,2168108.01",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": ""
+      },
+      "id": "building",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "building"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        67.49999999060392,
+        6.679181199074439,
+        97.03156778649293,
+        35.39646669570055
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "planet_osm_point",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "7514065.6275,745212.802719324,10801504.7168654,4217890.76526795",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "",
+        "id": "planetosmpoint",
+        "project": "india-streets",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "planetosmpoint",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "planetosmpoint"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        72.79168115355435,
+        18.807699780555687,
+        72.94759706617951,
+        19.179301523111132
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "planet_osm_line",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "8103132.88,2132308.71,8120489.36,2176057.18",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": ""
+      },
+      "id": "planetosmline1",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "planetosmline1"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "India OSMData Preview",
+  "description": "",
+  "attribution": ""
+}

@@ -1,0 +1,159 @@
+@building:white;
+@tarmac:#888;
+@power:#aaa;
+
+#building,#planetosmline{
+  [building!='']::dropshadow,[barrier!='']::dropshadow{
+
+    line-color:black;
+    line-width:1;
+    line-comp-op:multiply;
+    line-opacity:1;
+    image-filters:agg-stack-blur(2,2);/*
+    [tunnel='yes']{line-opacity:0;}
+    [bridge='yes']{line-width:2;}*/
+    [building='concourse']{line-opacity:0;}
+    [historic!='']{
+    line-color:@culture;
+    //  line-comp-op:hard-light;
+    }
+  }
+ 
+  }
+
+#building::highlight{
+  [building='concourse']{
+    polygon-fill:@foot;
+      polygon-opacity:0;
+        }
+  [building!=''][building!='concourse']{
+  building-fill:@building ;
+    building-height:3;
+    line-color:black;
+    line-width:0.1;
+    line-comp-op:multiply;
+    building-fill-opacity:0.3;
+    polygon-comp-op:screen;
+    
+    }
+  
+    [historic!='']{
+    line-color:@culture;
+      
+  }
+  
+  }
+
+#planetosmpolygon{
+  [leisure='park'],
+    {
+     polygon-fill:@open ;
+    polygon-opacity:0.8;
+    polygon-comp-op:screen;
+    }
+  [leisure='common'],[leisure='playground'],[landuse='village_green'],[leisure='garden'],[landuse='grass']{
+     polygon-fill:desaturate(#658d00,50%) ;
+    polygon-opacity:0.8;
+    polygon-comp-op:screen;
+    }
+  [natural='wood']
+  [amenity='fountain']{
+     polygon-fill:@water ;
+    line-color:darken(@building,40%);
+    line-width:0.5;
+    line-comp-op:multiply;
+    polygon-opacity:1;
+    polygon-comp-op:minus;
+    }
+  
+  [aeroway='apron']{
+    polygon-fill:@tarmac ;
+    polygon-opacity:0.9;
+    }
+  [aeroway='runway']{
+    polygon-fill:@tarmac;
+    polygon-opacity:0.8;
+    line-color:white;
+    line-width:1.5;
+    }
+  [aeroway='taxiway']{
+    polygon-fill:@tarmac;
+    polygon-opacity:0.9;
+    }
+  }
+#planetosmline{
+   [aeroway='taxiway']{
+    line-color:@tarmac;
+    line-opacity:0.5;
+    line-join:round;
+    line-width:8;
+    line-comp-op:multiply;
+    ::centerline{
+    line-color:yellow;
+    line-opacity:0.5;
+    line-join:round;
+    line-width:0.5;
+      }
+    }
+  [aeroway='runway']{
+    
+    line-color:@tarmac;
+    line-opacity:0.8;
+    line-comp-op:multiply;
+    line-join:round;
+    line-width:15;
+    line-cap:square;
+    ::centerline{
+    line-color:white;
+    line-opacity:1;
+    line-join:round;
+    line-width:1;
+      line-dasharray:15,15;
+      }
+    }
+  }
+
+#plaentosmpolygon[power!='']{
+  polygon-fill:@power;
+  polygon-comp-op:lighten;
+  polygon-opacity:0.2;
+  
+  }
+#planetosmline[power!='']{
+  line-color:@power;
+    line-opacity:0.1;
+  line-comp-op:lighten;
+    line-width:10;
+    ::centerline{
+    line-color:white;
+    line-opacity:0.5;
+    line-join:round;
+    line-width:0.3;
+      }
+    }
+  #planetosmline,#planetosmpolygon{
+  [barrier='city_wall']{
+   line-color:@building;
+    line-opacity:0.8;
+    line-comp-op:color-dodge;
+     line-width:2;
+  }
+  [barrier='wall']{
+  line-color:@building;
+    line-opacity:0.8;
+    line-comp-op:color-dodge;
+     line-width:0.5;
+  }
+  [waterway='dam']{
+  line-color:@building;
+    line-opacity:0.8;
+    line-comp-op:color-dodge;
+     line-width:4;
+  }
+  [waterway='weir']{
+  line-color:@building;
+    line-opacity:0.5;
+    line-comp-op:color-dodge;
+     line-width:1;
+  }
+  }
